@@ -46,12 +46,10 @@ The final view, `v_loan_flat`, has 307,511 rows (one per loan) and 34 columns. V
 | `sql/03_v_bureau_summary.sql` | External credit per client |
 | `sql/04_v_prev_summary.sql` | Previous applications per client |
 | `sql/05_v_loan_flat.sql` | Final joined view |
-| `sql/06_validation_checks.sql` | Row-count and total checks |
-| `sql/07_extra_analysis.sql` | Extra analysis queries |
 
 
 
-## 7. Dashboard
+## 5. Dashboard
 Power BI reads one flat table, `v_loan_flat`, so no relationships are needed. About 16 DAX measures (Total Loans, Defaults, Default Rate, Portfolio Default Rate, Rate vs Portfolio and others) and 7 calculated band columns drive the dashboard.
 
 Built in Power BI Desktop on a single table, with the same filters on every page.
@@ -64,3 +62,29 @@ Built in Power BI Desktop on a single table, with the same filters on every page
 
 **Interactive features:** synced slicers across pages, bookmark buttons that swap each chart for an alternative view, a hide-and-show "More filters" panel, Key influencers (AI) view, and drillthrough.
 
+## 6. Key Findings
+
+- **Overall default rate is 8.07%** (24,825 of 307,511 loans).
+- **Age matters most.** Default rate falls steadily with age, from **11.46%** (20-29) to **4.92%** (60+).
+- **Short work history is riskier.** Borrowers with under 2 years of employment default at **11.18%**, against **4.20%** for 20+ years.
+- **Earlier refusals predict risk.** Default rate rises from **6.98%** (no refusals) to **13.34%** (4 or more).
+- **Missing bureau history is a warning sign.** **10.12%** with no external credit history, against **7.73%** with history. The highest group of all is borrowers with no bureau history but earlier applications, at **10.29%**.
+- **Job type varies a lot.** Low-skill Laborers (**17.15%**), Drivers (**11.33%**) and Waiters/barmen (**11.28%**) are highest. Accountants are lowest at **4.83%** (occupations with 1,000+ loans).
+- **Higher region rating, higher risk.** Default rate rises from rating 1 to rating 3 (cash loans **5.11%** to **11.50%**), and cash loans default more than revolving loans at every rating.
+- **Higher income helps, but only at the top.** The 300K+ bracket defaults at **5.95%**, while the lower brackets are all about 8 to 8.6%.
+
+*These are patterns in the data, not proof of cause.*
+
+## 10. Skills Demonstrated
+
+- SQL data cleaning and validation (T-SQL views, `CASE WHEN`, conditional aggregation, `LEFT JOIN`)
+- Avoiding row duplication when joining one-to-many tables
+- Business metric design (default rate, rate vs portfolio)
+- Power BI dashboards: DAX measures, slicers, bookmarks, drillthrough
+- AI visuals (Key influencers, decomposition tree, smart narrative)
+- Data storytelling and clear documentation
+
+## 11. Author
+
+**Rildon Koren** — Data Analyst | Power BI  
+🔗 [LinkedIn](https://www.linkedin.com/in/rildon-koren-b11911342/) | ✉️ rildonrk6@gmail.com
