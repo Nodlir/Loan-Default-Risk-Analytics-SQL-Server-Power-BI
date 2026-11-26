@@ -41,7 +41,6 @@ The final view, `v_loan_flat`, has 307,511 rows (one per loan) and 34 columns. V
 
 | Script | Purpose |
 |---|---|
-| `sql/01_profiling.sql` | Row counts, NULLs, odd values |
 | `sql/02_v_application_clean.sql` | Cleaned applications |
 | `sql/03_v_bureau_summary.sql` | External credit per client |
 | `sql/04_v_prev_summary.sql` | Previous applications per client |
