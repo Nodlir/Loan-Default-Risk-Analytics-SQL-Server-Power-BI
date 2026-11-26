@@ -75,7 +75,7 @@ Built in Power BI Desktop on a single table, with the same filters on every page
 
 *These are patterns in the data, not proof of cause.*
 
-## 10. Skills Demonstrated
+## 7. Skills Demonstrated
 
 - SQL data cleaning and validation (T-SQL views, `CASE WHEN`, conditional aggregation, `LEFT JOIN`)
 - Avoiding row duplication when joining one-to-many tables
@@ -84,7 +84,7 @@ Built in Power BI Desktop on a single table, with the same filters on every page
 - AI visuals (Key influencers, decomposition tree, smart narrative)
 - Data storytelling and clear documentation
 
-## 11. Author
+## 8. Author
 
 **Rildon Koren** — Data Analyst | Power BI  
 🔗 [LinkedIn](https://www.linkedin.com/in/rildon-koren-b11911342/) | ✉️ rildonrk6@gmail.com
